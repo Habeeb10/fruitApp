@@ -14,3 +14,4 @@ export const vanilla = "#FEF0F0";
 export const wheat = "#F1EFF6";
 export const transparent = "#333333";
 export const black = "#000000";
+export const green = "#4CD964";
