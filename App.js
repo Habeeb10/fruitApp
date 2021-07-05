@@ -1,16 +1,20 @@
 import "react-native-gesture-handler";
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import MainNavigator from "./src/Navigator/MainNavigator";
-import TabNavigator from "./src/Navigator/TabNavigator";
-import Navigator from "./src/Navigator/MainNavigator";
-import MyTabs from "./src/Navigator/TabNavigator";
+import Welcome from "./src/screens/welcome/welcome";
+import Navigator from "./src/Navigator/Navigation";
 
 export default function App() {
-  return (
-   
-    <MyTabs/>
-    
-    
-  );
+  return <Navigator />;
 }
+
+// "My title", "My message", (text) => console.log(text)
+// <SafeAreaView style={styles.container}>
+//   <Button
+//     title="click"
+//     onPress={() =>
+//       Alert.alert(" Registration Successfull", "my message", [
+//         { text: "okay", onPress: () => console.log("okay") },
+//       ])
+//     }
+//   />
+// </SafeAreaView>
