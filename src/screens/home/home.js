@@ -28,7 +28,7 @@ const SelectList = [
   {
     icon: Images.breakfast,
     title: "Quinoa fruit salad",
-    icon2: <Heart />,
+    icons: <Heart />,
     amount: "10,000",
     icon3: <Add />,
   },
@@ -36,7 +36,7 @@ const SelectList = [
   {
     icon: Images.tropical,
     title: "Tropical fruit salad",
-    icon2: <Heart />,
+    icons: <Heart />,
     amount: "10,000",
     icon3: <Add />,
   },
@@ -44,7 +44,7 @@ const SelectList = [
   {
     icon: Images.berry,
     title: "melon fruit salad",
-    icon2: <Heart />,
+    icons: <Heart />,
     amount: "10,000",
     icon3: <Add />,
   },
@@ -94,7 +94,7 @@ export default function Home({ navigation }) {
               key={index}
               icon={item.icon}
               title={item.title}
-              icon2={item.icon2}
+              icons={item.icon2}
               icon3={item.icon3}
               amount={item.amount}
               onPress={() =>
