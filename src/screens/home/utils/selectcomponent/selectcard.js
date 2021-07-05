@@ -2,11 +2,11 @@ import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import * as colors from "../../../../common/color";
 
-export const SelectCard = ({ title, icon3, icon, icon2, amount, onPress }) => {
+export const SelectCard = ({ title, icon3, icon, icons, amount, onPress }) => {
   return (
     <View>
       <TouchableOpacity onPress={onPress} style={styles.click}>
-        <View style={{ marginLeft: 60, marginTop: 10 }}>{icon2}</View>
+        <View style={{ marginLeft: 60, marginTop: 10 }}>{icons}</View>
         <Image resizeMode="contain" style={styles.image} source={icon} />
         <Text style={styles.title}>{title}</Text>
         <View style={styles.amountbox}>
