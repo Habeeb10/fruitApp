@@ -24,7 +24,7 @@ const SelectList = [
 
   {
     icon: Images.berry,
-    title: "melon fruit salad",
+    title: "Melon fruit salad",
     icon2: <Heart />,
     amount: "10,000",
     icon3: <Add />,
