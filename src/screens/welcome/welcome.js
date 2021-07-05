@@ -6,17 +6,18 @@ import { bascket } from "../../../assets/images";
 import Ellipse from "../../../assets/svg";
 import { drops } from "../../../assets/images";
 import { Button } from "../../shared/button";
+import { Container } from "../../common/Container";
 
 export default function Welcome({ navigation }) {
   return (
-    <SafeAreaView style={{ backgroundColor: "orange" }}>
-      <StatusBar style={"dark"} />
-      <Image source={drops} style={styles.drops} />
-      <Image source={bascket} style={styles.basket} />
-      <View style={styles.ellipse}>
-        <Ellipse />
-      </View>
-      <View style={styles.cont}>
+    <Container>
+      <View style={{ backgroundColor: "orange", height: "63%" }}>
+        <Image source={drops} style={styles.drops} />
+        <Image source={bascket} style={styles.basket} />
+        <View style={styles.ellipse}>
+          <Ellipse />
+        </View>
+
         <Text style={styles.combo}>Get The Freshest Fruit Salad Combo</Text>
         <Text style={styles.today}>
           We deliver the best and freshest fruit salad in town. Order for a
@@ -28,6 +29,6 @@ export default function Welcome({ navigation }) {
           onPress={() => navigation.navigate("authentication")}
         />
       </View>
-    </SafeAreaView>
+    </Container>
   );
 }
