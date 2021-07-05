@@ -29,12 +29,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   input: {
-    fontSize: 18,
+    fontSize: 16,
     color: colors.deepgray,
   },
   label: {
     fontWeight: "500",
-    fontSize: 20,
+    fontSize: 16,
     color: colors.deepblue,
     marginLeft: 20,
     marginTop: 25,
