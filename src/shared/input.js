@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     height: 56,
   },
   textInput: {
-    fontSize: 20,
+    fontSize: 16,
     color: colors.deepgray,
     marginTop: 10,
   },
