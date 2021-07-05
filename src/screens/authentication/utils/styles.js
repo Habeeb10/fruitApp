@@ -36,7 +36,4 @@ export const Authenticationstyles = StyleSheet.create({
     resizeMode: "contain",
     alignSelf: "center",
   },
-  container: {
-    flex: 1,
-  },
 });
