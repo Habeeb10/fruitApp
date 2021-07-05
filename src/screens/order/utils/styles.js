@@ -61,6 +61,7 @@ export const Orderstyles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
+    marginBottom: 10,
   },
   total: {
     color: colors.black,
@@ -85,7 +86,7 @@ export const Orderstyles = StyleSheet.create({
     backgroundColor: colors.white,
     borderTopRightRadius: 10,
     borderTopLeftRadius: 10,
-    height: 500,
+    height: 400,
     width: "100%",
     opacity: 1,
     marginTop: 10,
@@ -94,16 +95,12 @@ export const Orderstyles = StyleSheet.create({
     backgroundColor: colors.white,
     borderTopRightRadius: 10,
     borderTopLeftRadius: 10,
-    height: 400,
+    height: 500,
     width: "100%",
-    opacity: 1,
   },
 
   orderbox: {
     paddingHorizontal: 20,
     justifyContent: "space-between",
-  },
-  cont: {
-    marginTop: 100,
   },
 });
