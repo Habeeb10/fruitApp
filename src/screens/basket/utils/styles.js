@@ -105,11 +105,6 @@ export const Basketstyles = StyleSheet.create({
     marginRight: 20,
   },
 
-  cont: {
-    marginTop: 30,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-  },
   image: {
     height: 176,
     width: 176,
