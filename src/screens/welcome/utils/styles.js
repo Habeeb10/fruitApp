@@ -13,7 +13,7 @@ export const Welcomestyles = StyleSheet.create({
     marginTop: 30,
   },
   combo: {
-    marginTop: 40,
+    marginTop: 50,
     color: colors.deepblue,
     fontSize: 20,
     fontWeight: "500",
@@ -35,8 +35,5 @@ export const Welcomestyles = StyleSheet.create({
     width: 301,
     resizeMode: "contain",
     alignSelf: "center",
-  },
-  container: {
-    flex: 1,
   },
 });
