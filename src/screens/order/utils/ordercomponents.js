@@ -21,7 +21,7 @@ const Orderlist = [
 
   {
     icon: Images.berry,
-    title: "melon fruit salad",
+    title: "Melon fruit salad",
     packs: "2packs",
     amount: "20,000",
   },
