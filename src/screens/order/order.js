@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Text, View, TouchableOpacity } from "react-native";
-import { Toback, Exit } from "../../../assets/svg";
+import { Text, View } from "react-native";
+import { Toback } from "../../../assets/svg";
 import { Header } from "../../shared/header";
 import { Orderstyles as styles } from "../order/utils/styles";
 import { Ordercomp } from "./utils/ordercomponents";
 import { Button } from "../../shared/button";
-import Modal from "react-native-modal";
 import { Container } from "../../common/Container";
 import { Modalcomponent, Modalcomponent2 } from "./utils/modalcomponent";
 
@@ -41,8 +40,14 @@ export default function Order({ navigation }) {
         </View>
       </Container>
 
-      <Modalcomponent isVisible={modal1} close={() => setModalState1(false)} />
-
+      <Modalcomponent
+        isVisible={modal1}
+        close={() => setModalState1(false)}
+        handleDelivery={() => {
+          setModalState1(false);
+          setModalState2(true);
+        }}
+      />
       <Modalcomponent2 isVisible={modal2} close={() => setModalState2(false)} />
     </>
   );
