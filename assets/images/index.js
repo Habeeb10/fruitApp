@@ -6,3 +6,7 @@ export const glowing = require("./glowing.png");
 export const peach = require("./peach.png");
 export const tropical = require("./tropical.png");
 export const drops = require("./drops.png");
+export const note = require("./note.png");
+export const deliverybike = require("./deliverybike.png");
+export const map = require("./map.png");
+export const order = require("./order.png");
