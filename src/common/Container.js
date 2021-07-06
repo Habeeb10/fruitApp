@@ -1,4 +1,4 @@
-import { SafeAreaView } from "react-native";
+import { SafeAreaView, View } from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 
@@ -11,9 +11,7 @@ export const Container = ({
     <>
       <StatusBar style={"dark"} />
       <SafeAreaView style={{ backgroundColor: barColor }} />
-      <SafeAreaView style={{ flex: 1, backgroundColor }}>
-        {children}
-      </SafeAreaView>
+      <View style={{ flex: 1, backgroundColor }}>{children}</View>
     </>
   );
 };
