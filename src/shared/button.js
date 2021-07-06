@@ -6,7 +6,7 @@ export const Button = ({ title, onPress, style, titleStyle }) => {
   return (
     <TouchableOpacity
       onPress={onPress}
-      activeOpacity={0.8}
+      activeOpacity={0.9}
       style={[styles.container, style]}
     >
       <Text style={[styles.button, titleStyle]}>{title}</Text>
