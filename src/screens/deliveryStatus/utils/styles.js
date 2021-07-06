@@ -1,0 +1,111 @@
+import { StyleSheet } from "react-native";
+import * as colors from "../../../common/color";
+
+export const Deliverystyles = StyleSheet.create({
+  orderreceived: {
+    color: colors.black,
+    fontSize: 16,
+    marginLeft: 20,
+    fontWeight: "500",
+  },
+  receivedbox: {
+    flexDirection: "row",
+
+    paddingHorizontal: 20,
+    marginTop: 40,
+    alignItems: "center",
+  },
+  checkcont: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: colors.green,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  checkedbox: {
+    width: 65,
+    height: 64,
+    backgroundColor: colors.lightgreen,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  map: {
+    width: 327,
+    height: 128,
+    borderRadius: 10,
+    alignSelf: "center",
+    marginTop: 40,
+  },
+  ordercont: {
+    width: 75,
+    height: 74,
+    backgroundColor: colors.wheat,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+  },
+  agent: {
+    fontSize: 13,
+    fontWeight: "400",
+    color: colors.black,
+    marginLeft: 24,
+    marginTop: 6,
+  },
+  agentbox: {
+    width: 75,
+    height: 74,
+    backgroundColor: colors.vanilla,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+  },
+  phonebox: {
+    width: 40,
+    height: 40,
+    backgroundColor: colors.orange,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  overall: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  token: {
+    fontSize: 16,
+    fontWeight: "500",
+    color: colors.black,
+    marginLeft: 24,
+  },
+  check: {
+    width: 24,
+    height: 24,
+    backgroundColor: colors.green,
+    borderRadius: 12,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  orderbox: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 15,
+    alignItems: "center",
+    marginTop: 50,
+  },
+  notebox: {
+    width: 75,
+    height: 74,
+    backgroundColor: colors.milk,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+  },
+  note: {
+    width: 100,
+    height: 60,
+    resizeMode: "contain",
+  },
+});
