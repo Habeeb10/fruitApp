@@ -1,20 +1,48 @@
 import "react-native-gesture-handler";
 import React from "react";
-import Welcome from "./src/screens/welcome/welcome";
 import Navigator from "./src/Navigator/Navigation";
+import Splashscreen from "./src/screens/splash/splash";
+import { useEffect } from "react";
+import { useState } from "react";
+import { StyleSheet, View } from "react-native";
 
 export default function App() {
-  return <Navigator />;
+  const [isVisible, setVisible] = useState(true);
+
+  const showScreen = () => {
+    setVisible(false);
+  };
+
+  useEffect(() => {
+    setTimeout(function () {
+      showScreen();
+    }, 10000);
+  });
+
+  return (
+    <View style={styles.MainContainer}>
+      {isVisible === true ? <Splashscreen /> : <Navigator />}
+    </View>
+  );
 }
 
-// "My title", "My message", (text) => console.log(text)
-// <SafeAreaView style={styles.container}>
-//   <Button
-//     title="click"
-//     onPress={() =>
-//       Alert.alert(" Registration Successfull", "my message", [
-//         { text: "okay", onPress: () => console.log("okay") },
-//       ])
-//     }
-//   />
-// </SafeAreaView>
+const styles = StyleSheet.create({
+  MainContainer: {
+    flex: 1,
+  },
+
+  SplashScreen_RootView: {
+    justifyContent: "center",
+    flex: 1,
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+  },
+
+  SplashScreen_ChildView: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FF2156",
+    flex: 1,
+  },
+});
