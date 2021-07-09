@@ -13,7 +13,7 @@ export const Welcomestyles = StyleSheet.create({
     marginTop: 30,
   },
   combo: {
-    marginTop: 50,
+    marginTop: 80,
     color: colors.deepblue,
     fontSize: 20,
     fontWeight: "500",
