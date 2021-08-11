@@ -1,7 +1,6 @@
 import "react-native-gesture-handler";
-import React, { useState } from "react";
-import { Image, SafeAreaView, Text, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { Basketstyles as styles } from "../basket/utils/styles";
 import { Hart, Toback } from "../../../assets/svg";
 import { Value } from "./utils/valuecomponent";
@@ -44,9 +43,9 @@ export default function Basket({ navigation, route }) {
         perfect brunch for you. make
       </Text>
       <View style={styles.addtocart}>
-        <View style={styles.hartbox}>
+        <TouchableOpacity style={styles.hartbox}>
           <Hart />
-        </View>
+        </TouchableOpacity>
         <Button
           title="Add to basket"
           style={styles.button}
