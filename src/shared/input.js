@@ -2,13 +2,15 @@ import React from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import * as colors from "../common/color";
 
-export const Fillinput = ({ placeholder, style }) => {
+export const Fillinput = ({ placeholder, style, onchange, value }) => {
   return (
     <View style={[styles.container, style]}>
       <TextInput
         style={styles.textInput}
         placeholder={placeholder}
         placeholderTextColor={colors.deepgray}
+        onChangeText={onchange}
+        value={value}
       />
     </View>
   );
@@ -26,6 +28,6 @@ const styles = StyleSheet.create({
   textInput: {
     fontSize: 16,
     color: colors.deepgray,
-    marginTop: 10,
+    marginTop: 20,
   },
 });
