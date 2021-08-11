@@ -3,7 +3,7 @@ import { StyleSheet, TextInput, View } from "react-native";
 import { Search } from "../../assets/svg";
 import * as colors from "../common/color";
 
-export const Searchinput = ({ placeholder, icon, style }) => {
+export const Searchinput = ({ placeholder, icon, onChange, value }) => {
   return (
     <View style={styles.container}>
       <View>{(icon = <Search />)}</View>
@@ -11,6 +11,8 @@ export const Searchinput = ({ placeholder, icon, style }) => {
         style={styles.textInput}
         placeholder={placeholder}
         placeholderTextColor={colors.deepgrey}
+        onChangeText={onChange}
+        value={value}
       />
     </View>
   );
@@ -29,7 +31,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     marginLeft: 10,
-    fontSize: 14,
+    fontSize: 18,
     color: colors.deepgrey,
   },
 });

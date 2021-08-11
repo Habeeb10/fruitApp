@@ -42,7 +42,6 @@ export const Modalcomponent = ({ close, isVisible, handleDelivery }) => {
 
 export const Modalcomponent2 = ({ isVisible, close }) => {
   const navigation = useNavigation();
-
   return (
     <View>
       <Modal

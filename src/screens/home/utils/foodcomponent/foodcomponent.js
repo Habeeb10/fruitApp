@@ -5,7 +5,7 @@ import * as Images from "../../../../../assets/images";
 import { FoodCard } from "../foodcomponent/foodcard";
 import { Homestyles as styles } from "../styles";
 
-const FoodList = [
+export const FoodList = [
   {
     icon: Images.peach,
     title: "Honey lime combo",
@@ -22,22 +22,3 @@ const FoodList = [
     icon3: <Add />,
   },
 ];
-
-export const Foodcomp = () => {
-  return (
-    <View style={styles.foodbox}>
-      {FoodList.map((item, index) => {
-        return (
-          <FoodCard
-            key={index}
-            icon={item.icon}
-            title={item.title}
-            icon2={item.icon2}
-            icon3={item.icon3}
-            amount={item.amount}
-          />
-        );
-      })}
-    </View>
-  );
-};

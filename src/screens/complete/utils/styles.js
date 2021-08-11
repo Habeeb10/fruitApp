@@ -19,7 +19,7 @@ export const Completestyles = StyleSheet.create({
   order: {
     color: colors.deepblue,
     fontWeight: "400",
-    fontSize: 20,
+    fontSize: 18,
     alignSelf: "center",
     marginTop: 30,
     textAlign: "center",
@@ -28,7 +28,7 @@ export const Completestyles = StyleSheet.create({
   congrats: {
     color: colors.deepblue,
     fontWeight: "500",
-    fontSize: 32,
+    fontSize: 35,
     alignSelf: "center",
     marginTop: 40,
     textAlign: "center",

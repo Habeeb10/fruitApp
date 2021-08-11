@@ -1,11 +1,11 @@
 import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 import * as colors from "../../../common/color";
 
 export const OrderCard = ({ title, packs, icon, amount }) => {
   return (
     <View>
-      <View
+      <TouchableOpacity
         style={{
           flexDirection: "row",
           alignItems: "center",
@@ -20,7 +20,7 @@ export const OrderCard = ({ title, packs, icon, amount }) => {
           <Text style={styles.packs}>{packs}</Text>
         </View>
         <Text style={styles.amount}>{`# ${amount}`}</Text>
-      </View>
+      </TouchableOpacity>
       <View style={styles.line} />
     </View>
   );

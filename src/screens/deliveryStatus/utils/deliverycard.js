@@ -2,27 +2,27 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import * as colors from "../../../common/color";
 
-const getBackgroundcolor = (title) => {
-  switch (title) {
-    case "Order Taken":
-      return { bg: colors.milk };
-    case "Order Is Being Prepared":
-      return { bg: colors.wheat };
-    case "Order Is Being Delivered":
-      return { bg: colors.vanilla };
-  }
-};
-
 // const getBackgroundcolor = (title) => {
 //   switch (title) {
 //     case "Order Taken":
-//       return [colors.milk];
+//       return { bg: colors.milk };
 //     case "Order Is Being Prepared":
-//       return [colors.wheat];
+//       return { bg: colors.wheat };
 //     case "Order Is Being Delivered":
-//       return [colors.vanilla];
+//       return { bg: colors.vanilla };
 //   }
 // };
+
+const getBackgroundcolor = (title) => {
+  switch (title) {
+    case "Order Taken":
+      return [colors.milk];
+    case "Order Is Being Prepared":
+      return [colors.wheat];
+    case "Order Is Being Delivered":
+      return [colors.vanilla];
+  }
+};
 
 export const Deliverycard = ({ title, agent, icon, icon2 }) => {
   return (
@@ -31,7 +31,7 @@ export const Deliverycard = ({ title, agent, icon, icon2 }) => {
         <TouchableOpacity
           style={[
             styles.notebox,
-            { backgroundColor: getBackgroundcolor(title) },
+            { backgroundColor: getBackgroundcolor(title)[0] },
           ]}
         >
           <Image source={icon} style={styles.icon} />
@@ -44,7 +44,7 @@ export const Deliverycard = ({ title, agent, icon, icon2 }) => {
       <TouchableOpacity
         style={[
           styles.check,
-          //   { backgroundColor: getBackgroundcolor(title)[1] },
+          // { backgroundColor: getBackgroundcolor(title)[1] },
         ]}
       >
         {icon2}
@@ -54,48 +54,24 @@ export const Deliverycard = ({ title, agent, icon, icon2 }) => {
 };
 
 const styles = StyleSheet.create({
-  ordercont: {
-    width: 75,
-    height: 74,
-    backgroundColor: colors.wheat,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 20,
-  },
   agent: {
     fontSize: 13,
     fontWeight: "400",
     color: colors.black,
-    marginLeft: 24,
     marginTop: 6,
+    marginLeft: 20,
   },
-  agentbox: {
-    width: 75,
-    height: 74,
-    backgroundColor: colors.vanilla,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 20,
-  },
-  phonebox: {
-    width: 40,
-    height: 40,
-    backgroundColor: colors.orange,
-    borderRadius: 20,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+
   orderbox: {
     flexDirection: "row",
-    alignItems: "center",
     paddingHorizontal: 15,
-    alignItems: "center",
   },
   token: {
     fontSize: 16,
     fontWeight: "500",
     color: colors.black,
-    marginLeft: 24,
+    marginLeft: 25,
+    marginTop: 30,
   },
   check: {
     width: 24,
@@ -104,25 +80,26 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
+    marginLeft: 35,
+    marginTop: 8,
   },
   overall: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 15,
     marginTop: 40,
   },
 
   notebox: {
     width: 75,
     height: 74,
-    backgroundColor: colors.milk,
-    alignItems: "center",
-    justifyContent: "center",
     borderRadius: 20,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10,
   },
   icon: {
-    width: 100,
+    width: 70,
     height: 60,
     resizeMode: "contain",
   },

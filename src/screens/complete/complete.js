@@ -28,6 +28,7 @@ export default function Complete({ navigation }) {
         title="Continue Shopping"
         style={styles.shoppingbutton}
         titleStyle={styles.title}
+        onPress={() => navigation.navigate("authentication")}
       />
     </Container>
   );

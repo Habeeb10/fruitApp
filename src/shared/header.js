@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "400",
     marginTop: 20,
-    marginLeft: 50,
+    marginLeft: 20,
   },
   container: {
     marginTop: 25,

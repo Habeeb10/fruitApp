@@ -7,7 +7,7 @@ import { Deliverystyles as styles } from "./utils/styles";
 import { map } from "../../../assets/images";
 import { Deliverycomp } from "./utils/deliverycomponent";
 
-export default function Delivery() {
+export default function Delivery({ navigation }) {
   return (
     <>
       <Container>
@@ -19,7 +19,10 @@ export default function Delivery() {
             onPress={() => navigation.navigate("basket")}
           />
         </View>
-        <Deliverycomp />
+        <View style={{ alignSelf: "flex-start" }}>
+          <Deliverycomp />
+        </View>
+
         <Image source={map} style={styles.map} />
         <View style={styles.receivedbox}>
           <TouchableOpacity style={styles.checkedbox}>

@@ -10,7 +10,6 @@ export const Deliverystyles = StyleSheet.create({
   },
   receivedbox: {
     flexDirection: "row",
-
     paddingHorizontal: 20,
     marginTop: 40,
     alignItems: "center",
@@ -32,11 +31,11 @@ export const Deliverystyles = StyleSheet.create({
     justifyContent: "center",
   },
   map: {
-    width: 327,
+    width: 347,
     height: 128,
     borderRadius: 10,
     alignSelf: "center",
-    marginTop: 40,
+    marginTop: 20,
   },
   ordercont: {
     width: 75,
