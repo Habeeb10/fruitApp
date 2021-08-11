@@ -8,6 +8,11 @@ import { StyleSheet, View } from "react-native";
 
 export default function App() {
   const [isVisible, setVisible] = useState(true);
+  // const { isLoadingComplete } = LoadFonts();
+
+  // if (isLoadingComplete) {
+  //   return <Navigator />;
+  // } else return null;
 
   const showScreen = () => {
     setVisible(false);
@@ -16,7 +21,7 @@ export default function App() {
   useEffect(() => {
     setTimeout(function () {
       showScreen();
-    }, 10000);
+    }, 500);
   });
 
   return (
