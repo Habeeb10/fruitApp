@@ -16,7 +16,7 @@ export default function Delivery({ navigation }) {
             icon={<Toback />}
             back="Go back"
             title="Delivery Status"
-            onPress={() => navigation.navigate("basket")}
+            onPress={() => navigation.navigate("order")}
           />
         </View>
         <View style={{ alignSelf: "flex-start" }}>

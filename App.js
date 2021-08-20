@@ -21,7 +21,7 @@ export default function App() {
   useEffect(() => {
     setTimeout(function () {
       showScreen();
-    }, 500);
+    }, 5000);
   });
 
   return (

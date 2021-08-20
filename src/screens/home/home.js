@@ -83,10 +83,7 @@ export default function Home({ navigation }) {
           >
             <Cart />
           </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.basketbox}
-            onPress={() => navigation.navigate("order")}
-          >
+          <TouchableOpacity style={styles.basketbox}>
             <Basket />
             <Text style={styles.basket}>my basket</Text>
           </TouchableOpacity>
