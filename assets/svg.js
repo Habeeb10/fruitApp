@@ -166,13 +166,7 @@ export function Check(props) {
 
 export function Add(props) {
   return (
-    <Svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <Svg width="12" height="12" viewBox="0 0 12 12" fill="#EC7B15">
       <Path
         d="M6.75 5.25V0H5.25V5.25H0V6.75H5.25V12H6.75V6.75H12V5.25H6.75Z"
         fill="#EC7B15"
