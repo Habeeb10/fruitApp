@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import * as colors from "../../../../common/color";
+import { hp, wp } from "../../../../common/utils";
 
 export const FoodCard = ({ title, icon3, icon, icon2, amount, onPress }) => {
   return (
@@ -24,37 +25,37 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   title: {
-    fontSize: 13,
+    fontSize: hp(13),
     color: colors.deepblue,
   },
   amountbox: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 10,
+    marginTop: hp(10),
     justifyContent: "space-around",
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
   },
   addbox: {
-    width: 15,
-    height: 15,
+    width: wp(15),
+    height: hp(15),
     borderRadius: 12,
     backgroundColor: colors.lightorange,
     alignItems: "center",
     justifyContent: "center",
-    marginLeft: 80,
+    marginLeft: 60,
   },
   image: {
-    width: 80,
-    height: 80,
-    marginBottom: 10,
+    width: wp(80),
+    height: hp(80),
+    marginBottom: hp(10),
   },
   click: {
-    height: 200,
-    width: 162,
+    height: hp(183),
+    width: wp(152),
     backgroundColor: colors.white,
     borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 40,
+    marginTop: hp(24),
   },
 });

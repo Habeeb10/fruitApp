@@ -26,7 +26,10 @@ export default function Delivery({ navigation }) {
         <Image source={map} style={styles.map} />
         <View style={styles.receivedbox}>
           <TouchableOpacity style={styles.checkedbox}>
-            <TouchableOpacity style={styles.checkcont}>
+            <TouchableOpacity
+              style={styles.checkcont}
+              onPress={() => navigation.navigate("authentication")}
+            >
               <Final />
             </TouchableOpacity>
           </TouchableOpacity>

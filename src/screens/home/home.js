@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View, ScrollView } from "react-native";
 import { Homestyles as styles } from "../home/utils/styles";
 import { Add, Basket, Cart, Heart, Sort } from "../../../assets/svg";
 import { Searchinput } from "../../shared/searchinput";
@@ -10,6 +10,8 @@ import { SelectCard } from "./utils/selectcomponent/selectcard";
 import { FoodList } from "./utils/foodcomponent/foodcomponent";
 import { Container } from "../../common/Container";
 import { FoodCard } from "./utils/foodcomponent/foodcard";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { hp } from "../../common/utils";
 
 const TitleList = [
   {
@@ -77,80 +79,89 @@ export default function Home({ navigation }) {
   return (
     <>
       <Container barColor="#F3F4F9">
-        <View style={styles.iconbox}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate("authentication")}
+        <KeyboardAwareScrollView>
+          <View style={styles.iconbox}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("authentication")}
+            >
+              <Cart />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.basketbox}>
+              <Basket />
+              <Text style={styles.basket}>my basket</Text>
+            </TouchableOpacity>
+          </View>
+
+          <Text style={styles.fruit}>
+            Hello Tony, What fruit salad combo do you want today?
+          </Text>
+          <View style={styles.sortbox}>
+            <Searchinput
+              placeholder="Search for fruit salad combos"
+              onChange={(text) => filterSearch(text)}
+            />
+            <TouchableOpacity>
+              <Sort style={{ marginTop: hp(24), marginRight: 10 }} />
+            </TouchableOpacity>
+          </View>
+          <Text style={styles.combo}>Recommended Combo</Text>
+
+          <View style={styles.foodbox}>
+            {dataLength < 1
+              ? null
+              : allFoodComp.map((item, index) => {
+                  return (
+                    <FoodCard
+                      key={index}
+                      icon={item.icon}
+                      title={item.title}
+                      icon2={item.icon2}
+                      icon3={item.icon3}
+                      amount={item.amount}
+                    />
+                  );
+                })}
+          </View>
+          <View style={styles.titlebox}>
+            {TitleList.map((item, index) => {
+              return (
+                <TitleCard
+                  key={index}
+                  title={item.title}
+                  onPress={() => setActive(item.title)}
+                  isActive={item.title === active}
+                />
+              );
+            })}
+          </View>
+          <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+            style={styles.selectbox}
           >
-            <Cart />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.basketbox}>
-            <Basket />
-            <Text style={styles.basket}>my basket</Text>
-          </TouchableOpacity>
-        </View>
-
-        <Text style={styles.fruit}>
-          Hello Tony, What fruit salad combo do you want today?
-        </Text>
-        <View style={styles.sortbox}>
-          <Searchinput
-            placeholder="Search for fruit salad combos"
-            onChange={(text) => filterSearch(text)}
-          />
-          <TouchableOpacity>
-            <Sort style={{ marginTop: 15, marginRight: 10 }} />
-          </TouchableOpacity>
-        </View>
-        <Text style={styles.combo}>Recommended Combo</Text>
-
-        <View style={styles.foodbox}>
-          {dataLength < 1
-            ? null
-            : allFoodComp.map((item, index) => {
-                return (
-                  <FoodCard
-                    key={index}
-                    icon={item.icon}
-                    title={item.title}
-                    icon2={item.icon2}
-                    icon3={item.icon3}
-                    amount={item.amount}
-                  />
-                );
-              })}
-        </View>
-
-        <View style={styles.titlebox}>
-          {TitleList.map((item, index) => {
-            return (
-              <TitleCard
-                key={index}
-                title={item.title}
-                onPress={() => setActive(item.title)}
-                isActive={item.title === active}
-              />
-            );
-          })}
-        </View>
-        <View style={styles.selectbox}>
-          {SelectList.map((item, index) => {
-            return (
-              <SelectCard
-                key={index}
-                icon={item.icon}
-                title={item.title}
-                icons={item.icon2}
-                icon3={item.icon3}
-                amount={item.amount}
-                onPress={() =>
-                  navigation.navigate("basket", {
-                    details: item,
-                  })
-                }
-              />
-            );
-          })}
-        </View>
+            {SelectList.map((item, index) => {
+              return (
+                <SelectCard
+                  key={index}
+                  icon={item.icon}
+                  title={item.title}
+                  icons={item.icons}
+                  icon3={item.icon3}
+                  amount={item.amount}
+                  onPress={() =>
+                    navigation.navigate("basket", {
+                      details: item,
+                    })
+                  }
+                />
+              );
+            })}
+          </ScrollView>
+        </KeyboardAwareScrollView>
       </Container>
     </>
   );

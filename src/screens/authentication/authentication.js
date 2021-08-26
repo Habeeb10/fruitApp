@@ -7,6 +7,8 @@ import { drops } from "../../../assets/images";
 import { Button } from "../../shared/button";
 import { Fillinput } from "../../shared/input";
 import { Container } from "../../common/Container";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { hp } from "../../common/utils";
 
 export default function Authentication({ navigation }) {
   const [firstname, setFirstname] = useState("");
@@ -18,27 +20,36 @@ export default function Authentication({ navigation }) {
   };
   return (
     <Container>
-      <View style={{ backgroundColor: "orange", height: "63%" }}>
-        <Image source={drops} style={styles.drops} />
-        <Image source={fruitbascket} style={styles.basket} />
-        <View style={styles.ellipse}>
-          <Ellipse />
+      <KeyboardAwareScrollView>
+        <View
+          style={{
+            backgroundColor: "orange",
+            paddingBottom: hp(31),
+          }}
+        >
+          <Image
+            source={fruitbascket}
+            style={styles.basket}
+            resizeMode="contain"
+          />
+          <View style={styles.ellipse}>
+            <Ellipse />
+          </View>
         </View>
         <View style={styles.cont}>
           <Text style={styles.combo}>What is your firstname?</Text>
           <Fillinput
             placeholder="Tony"
-            style={{ marginTop: 20 }}
             value={firstname}
             onchange={setFirstname}
           />
           <Button
             title="Start Ordering"
-            style={{ marginTop: 30 }}
+            style={{ marginTop: hp(42) }}
             onPress={handleStart}
           />
         </View>
-      </View>
+      </KeyboardAwareScrollView>
     </Container>
   );
 }

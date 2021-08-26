@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import * as colors from "../../../common/color";
+import { hp, wp } from "../../../common/utils";
 
 export const Authenticationstyles = StyleSheet.create({
   today: {
@@ -10,30 +11,23 @@ export const Authenticationstyles = StyleSheet.create({
   },
   cont: {
     backgroundColor: "white",
-    marginTop: 30,
   },
   combo: {
-    marginTop: 40,
+    marginTop: hp(40),
     color: colors.deepblue,
-    fontSize: 20,
+    fontSize: hp(20),
     fontWeight: "500",
-    marginBottom: 10,
-    marginLeft: 25,
+    marginBottom: hp(16),
+    marginLeft: wp(25),
   },
-  drops: {
-    height: 37.52,
-    width: 50,
-    marginLeft: 282,
-    marginTop: 131,
-  },
+
   ellipse: {
     alignSelf: "center",
-    marginTop: 15,
   },
   basket: {
-    height: 260,
-    width: 301,
-    resizeMode: "contain",
+    height: hp(301),
+    width: wp(301),
+    marginTop: hp(90),
     alignSelf: "center",
   },
 });
