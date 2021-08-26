@@ -2,7 +2,13 @@ import React from "react";
 import { View, TextInput, StyleSheet, Text } from "react-native";
 import * as colors from "../common/color";
 
-export const Labelinput = ({ placeHolder, style, label, inputStyle }) => {
+export const Labelinput = ({
+  placeHolder,
+  style,
+  label,
+  inputStyle,
+  keyboardType,
+}) => {
   return (
     <View>
       <Text style={styles.label}>{label}</Text>
@@ -10,7 +16,8 @@ export const Labelinput = ({ placeHolder, style, label, inputStyle }) => {
         <TextInput
           style={[styles.input, inputStyle]}
           placeholder={placeHolder}
-          placeholderTextColor={colors.deepgray}
+          placeholderTextColor={colors.deepgrey}
+          keyboardType={keyboardType}
         />
       </View>
     </View>
@@ -29,8 +36,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   input: {
-    fontSize: 16,
-    color: colors.deepgray,
+    fontSize: 17,
+    color: colors.black,
   },
   label: {
     fontWeight: "500",
