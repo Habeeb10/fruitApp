@@ -7,13 +7,14 @@ export const Orderstyles = StyleSheet.create({
     fontSize: 14,
   },
   butbox: {
-    width: "100%",
-    height: 80,
+    width: "95%",
+    height: 90,
     backgroundColor: colors.orange,
-    borderRadius: 40,
-    marginTop: 20,
+    borderRadius: 20,
+    marginTop: 58,
     alignItems: "center",
     justifyContent: "center",
+    alignSelf: "center",
   },
   ordercont: {
     backgroundColor: colors.white,
@@ -62,6 +63,7 @@ export const Orderstyles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 10,
+    marginTop: 100,
   },
   total: {
     color: colors.black,

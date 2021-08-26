@@ -1,12 +1,13 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import * as colors from "../../../../common/color";
+import { hp, wp } from "../../../../common/utils";
 
 export const SelectCard = ({ title, icon3, icon, icons, amount, onPress }) => {
   return (
     <View>
       <TouchableOpacity onPress={onPress} style={styles.click}>
-        <View style={{ marginLeft: 60, marginTop: 10 }}>{icons}</View>
+        <View style={{ marginLeft: 100 }}>{icons}</View>
         <Image resizeMode="contain" style={styles.image} source={icon} />
         <Text style={styles.title}>{title}</Text>
         <View style={styles.amountbox}>
@@ -21,40 +22,39 @@ export const SelectCard = ({ title, icon3, icon, icons, amount, onPress }) => {
 const styles = StyleSheet.create({
   amount: {
     color: colors.orange,
-    fontSize: 12,
   },
   title: {
-    marginTop: 10,
-    fontSize: 8,
+    fontSize: hp(13),
     color: colors.deepblue,
   },
   amountbox: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 10,
+    marginTop: hp(10),
     justifyContent: "space-around",
-    paddingHorizontal: 20,
+    paddingHorizontal: 25,
   },
   addbox: {
-    width: 15,
-    height: 15,
+    width: wp(15),
+    height: hp(15),
     borderRadius: 12,
     backgroundColor: colors.lightorange,
     alignItems: "center",
     justifyContent: "center",
-    marginLeft: 25,
+    marginLeft: 60,
   },
   image: {
-    width: 100,
-    height: 50,
+    width: wp(96),
+    height: hp(58),
+    marginBottom: hp(10),
   },
   click: {
-    height: 140,
-    width: 110,
-    backgroundColor: colors.wheat,
+    height: hp(183),
+    width: wp(152),
+    backgroundColor: colors.white,
     borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: hp(24),
   },
 });

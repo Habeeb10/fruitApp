@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import * as colors from "../../../../common/color";
+import { hp } from "../../../../common/utils";
 
 export const TitleCard = ({ title, onPress, isActive }) => {
   return (
@@ -26,11 +27,11 @@ export const TitleCard = ({ title, onPress, isActive }) => {
 const styles = StyleSheet.create({
   textcolor: {
     color: colors.deepblue,
-    fontSize: 20,
+    fontSize: hp(20),
   },
 
   title: {
     color: colors.purple,
-    fontSize: 16,
+    fontSize: hp(20),
   },
 });

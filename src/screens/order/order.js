@@ -7,6 +7,7 @@ import { Ordercomp } from "./utils/ordercomponents";
 import { Button } from "../../shared/button";
 import { Container } from "../../common/Container";
 import { Modalcomponent, Modalcomponent2 } from "./utils/modalcomponent";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 export default function Order({ navigation }) {
   const [modal1, setModalState1] = useState(false);
@@ -48,7 +49,14 @@ export default function Order({ navigation }) {
           setModalState2(true);
         }}
       />
-      <Modalcomponent2 isVisible={modal2} close={() => setModalState2(false)} />
+      <Modalcomponent2
+        isVisible={modal2}
+        close={() => setModalState2(false)}
+        handleDelivery={() => {
+          navigation.navigate("complete");
+          setModalState2(false);
+        }}
+      />
     </>
   );
 }
